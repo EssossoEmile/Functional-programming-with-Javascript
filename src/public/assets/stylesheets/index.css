@@ -1,38 +1,320 @@
 /* -------------------  MOBILE  --------------------- */
 
 body {
-  display: flex;
-  flex-direction: column;
-  font-family: Arial;
-  min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial;
+    background-image: url(../stylesheets/image_mars.jpg);
+    background-size: cover;
+    min-height: 100vh;
 }
 
 header {
-  /* header styles */
+    width: 100%;
+    color: white;
+    text-align: center;
+    background-color: #333;
+    padding: 16px;
+    margin-bottom: 15px;
 }
 
 main {
-  flex: 1;
-  padding: 20px;
+    flex: 1;
+    padding: 0px;
 }
 
-footer {
-  /* footer styles */
+.container {
+    height: auto;
 }
+
+.tabs {
+    overflow: hidden;
+    border: 1px solid #333;
+    background-color: #333;
+    height: 15%;
+}
+
+.tabs button {
+    color: inherit;
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    text-align: center;
+    font-size: 20px;
+}
+
+.tabs button:hover {
+    background-color: limegreen;
+}
+
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    margin: 22px;
+    padding: 6px 12px;
+    border: 3px solid #ccc;
+    border-radius: 10px;
+    height: 900px;
+    background-color: rgba(65, 64, 62, 0.7);
+    color: white;
+    animation: fadeEffect 1s;
+}
+
+
+/* Go from zero to full opacity */
+
+@keyframes fadeEffect {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.close {
+    position: relative;
+    background-color: #4CAF50;
+    font-size: 16px;
+    color: white;
+    border-radius: 12px;
+    padding: 15px 32px;
+    border: none;
+    text-align: center;
+    max-height: auto;
+    margin-top: 90%;
+    float: right;
+}
+
+#Curiosity {
+    background-image: url(../stylesheets/curiosity.jpg);
+    background-size: cover;
+}
+
+#Opportunity {
+    background-image: url(../stylesheets/opportunity.jpg);
+    background-size: cover;
+}
+
+#Spirit {
+    background-image: url(../stylesheets/spirit.jpg);
+    background-size: cover;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: relative;
+    top: 60%;
+    width: auto;
+    padding: 16px;
+    color: rgb(3, 3, 3);
+    background-color: inherit;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    user-select: none;
+}
+
+
+/* Position the "next button" to the right */
+
+.next {
+    right: 0;
+}
+
+
+/* On hover, add a black background color with a little bit see-through */
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.slider-container {
+    position: absolute;
+    height: auto;
+    margin: 0;
+}
+
+.roverImage {
+    width: 300px;
+    height: inherit;
+    position: relative;
+}
+
+.aside {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 20px;
+    margin: 12px;
+}
+
+.head {
+    color: white;
+    padding: 20px;
+}
+
 
 /* -------------------  TABLET  --------------------- */
+
 @media (min-width: 768px) {
-  /* use mobile */
+    .close {
+        position: relative;
+        background-color: #4CAF50;
+        font-size: 16px;
+        color: white;
+        border-radius: 12px;
+        padding: 15px 32px;
+        border: none;
+        text-align: center;
+        max-height: auto;
+        margin-top: 40%;
+        float: right;
+    }
 }
+
 
 /* -------------------  DESKTOP  -------------------- */
 
 @media (min-width: 1224px) {
-  /* use mobile */
+    .container {
+        height: 800px;
+    }
+    .tabs {
+        overflow: hidden;
+        border: 1px solid #333;
+        background-color: #333;
+        height: 15%;
+    }
+    .tabs button {
+        color: inherit;
+        background-color: inherit;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        transition: 0.3s;
+        text-align: center;
+        font-size: 20px;
+    }
+    .tabs button:hover {
+        background-color: limegreen;
+    }
+    .tabcontent {
+        display: none;
+        padding: 6px 12px;
+        border: 1px solid #ccc;
+        margin-right: 30px;
+        float: right;
+        margin-top: 2px;
+        padding: 6px 12px;
+        border: 3px solid #ccc;
+        border-radius: 10px;
+        position: relative;
+        max-width: 60%;
+        height: 700px;
+        background-color: rgba(65, 64, 62, 0.7);
+        color: white;
+        animation: fadeEffect 1s;
+    }
+    /* Go from zero to full opacity */
+    @keyframes fadeEffect {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    .close {
+        position: absolute;
+        background-color: #4CAF50;
+        font-size: 16px;
+        color: white;
+        border-radius: 12px;
+        padding: 15px 32px;
+        border: none;
+        text-align: center;
+        max-width: 10%;
+        max-height: auto;
+        margin-top: 25%;
+    }
+    #Curiosity {
+        background-image: url(../stylesheets/curiosity.jpg);
+        background-size: cover;
+    }
+    #Opportunity {
+        background-image: url(../stylesheets/opportunity.jpg);
+        background-size: cover;
+    }
+    #Spirit {
+        background-image: url(../stylesheets/spirit.jpg);
+        background-size: cover;
+    }
+    .prev,
+    .next {
+        cursor: pointer;
+        position: absolute;
+        top: 90%;
+        width: auto;
+        padding: 16px;
+        margin-top: -120px;
+        color: rgb(3, 3, 3);
+        background-color: inherit;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        user-select: none;
+    }
+    /* Position the "next button" to the right */
+    .next {
+        float: right;
+    }
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover,
+    .next:hover {
+        background-color: rgba(0, 0, 0, 0.596);
+    }
+    .slider-container {
+        position: absolute;
+        width: 50%;
+        height: auto;
+        margin: 0;
+    }
+    .roverImage {
+        max-height: auto;
+        width: 100%;
+        position: relative;
+    }
+    .aside {
+        display: inline-block;
+        margin-top: 200px;
+        max-width: 25%;
+        margin-left: 10%;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        padding: 20px;
+        max-height: 350px;
+        position: absolute;
+    }
+    .head {
+        position: relative;
+        margin-top: 6%;
+        margin-left: 60px;
+        color: white;
+    }
 }
+
 
 /* -------------------  LARGE SCREENS  -------------- */
 
 @media (min-width: 1824px) {
-  /* use mobile */
+    /* use mobile , will use the code for desktop*/
 }
